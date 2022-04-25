@@ -4,7 +4,7 @@
 
 body {
     margin: 0%;
-    background-color: rgb(22, 95, 155);
+    background-color: rgb(22, 155, 38);
 
 }
 
@@ -34,6 +34,9 @@ body {
 .nav>*:hover {
     background-color: rgb(56, 56, 56);
 }
+.nohover:hover{
+    background-color: black;
+}
 
 .right {
     margin-right: 0.8em;
@@ -51,8 +54,13 @@ body {
 
 }
 
-.icons>*:hover {
-    background-color: rgba(227, 248, 251, 0.2);
+.icons>*:hover, .icons>*:focus {
+    background-color: rgba(106, 106, 106, 0.2);
+    border-width: 1px;
+    border-style: dotted;
+    border-color:  rgba(0, 0, 0, 0.447);
+    border-radius: 10%;
+    margin: -1px -1px;
 }
 
 .icon {
@@ -63,14 +71,15 @@ body {
     padding: 0.5em;
     background-color: rgba(240, 248, 255, 0);
     border-style: none;
+    text-decoration: none;
 }
 
-.icon>span {
+.icon>label {
     color: white;
     font-size: small;
     text-align: center;
-
 }
+
 
 .nojs {
     text-align: center;
@@ -80,3 +89,8 @@ body {
 
 }
 
+.colorpick{
+    z-index: 3;
+    border: 0ch;
+    background-color: rgba(51, 255, 0, 0);
+}

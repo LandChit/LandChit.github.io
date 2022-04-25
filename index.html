@@ -20,23 +20,33 @@
     <div class="icons">
 
         <button onclick="program(0)" class="icon">
-            <i class="fa fa-address-card fa-3x"></i>
-            <span>About Me</span>
+            <i class="fa fa-address-card fa-3x" style="color: rgb(47, 47, 47)"></i>
+            <label>About Me</label>
         </button>
 
         <button onclick="program(1)" class="icon">
-            <i class="fa fa-laptop-code fa-3x"></i>
-            <span>Technologies</span>
+            <i class="fa fa-laptop-code fa-3x" style="color: rgb(47, 47, 47)"></i>
+            <label>Technologies</label>
         </button>
 
         <button onclick="program(2)" class="icon">
-            <i class="fa fa-medal fa-3x"></i>
-            <span>Achievements</span>
+            <i class="fa fa-medal fa-3x" style="color: rgb(47, 47, 47)"></i>
+            <label>Achievements</label>
         </button>
 
-        <button onclick="program(3)" class="icon">
-            <i class="fa fa-code fa-3x"></i>
-            <span>Source Code</span>
+        <button onclick="javascript:window.open('https://github.com/LandChit/LandChit.github.io', '_blank')" formtarget="_blank" class="icon">
+            <i class="fa fa-code fa-3x" style="color: rgb(47, 47, 47)"></i>
+            <label>Source Code</label>
+        </button>
+
+        <button onclick="javascript:window.open('https://landchitbots.netlify.app', '_blank')" formtarget="_blank" class="icon">
+            <i class="fa-brands fa-discord fa-3x" style="color: rgb(56, 56, 201);"></i>
+            <label>Discord Bots</label>
+        </button>
+
+        <button onclick="javascript:window.open('https://discord.gg/SkUu6PB6b8', '_blank')" formtarget="_blank" class="icon">
+            <i class="fa-brands fa-discord fa-3x" style="color: rgb(62, 59, 94);"></i>
+            <label>Discord Server</label>
         </button>
 
     </div>
@@ -93,19 +103,6 @@
             </div>
         </div>
 
-        <!-- Source Code -->
-        <div id="SC">
-            <div class="bar">
-                <span>Source Code</span>
-                <button onclick="hide_all()">
-                    <i class="fa fa-close"></i>
-                </button>
-            </div>
-            <div class="content">
-                <a href="https://github.com/LandChit/myWebsite" target="_blank">Click Me I aint gonna past all of that lol</a>
-            </div>
-        </div>
-
 
     </div>
 
@@ -115,9 +112,12 @@
         <a href="https://www.youtube.com/channel/UCFTq9afPWgOwQRBfr4KRJtw" target="_blank"><i class="fa fa-youtube"></i></a>
         <a href="https://twitter.com/LandChit?t=yiqUBtaF_CgC_dGMmYR83Q&s=07" target="_blank"><i class="fa fa-twitter"></i></a>
         <a href="https://www.instagram.com/draggin_lance/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://github.com/LandChit/myWebsite" target="_blank"><i class="fa fa-code"></i></a>
+        <a href="https://github.com/LandChit/LandChit.github.io" target="_blank"><i class="fa fa-code"></i></a>
 
-        <span id="datetime" class="right"></span>
+        
+        <span for="color" class="nohover">Background Color:</span>
+        <input type="color" id="colorpicker" value="#169b26" class="colorpick">
+        <span id="datetime" class="right nohover"></span>
     </div>
 
     <script rel="javascript" src="js/time.js"></script>

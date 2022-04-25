@@ -43,10 +43,11 @@ body {
 
 .icons {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     width: max-content;
     margin-left: 1em;
     margin-top: 1em;
+    max-height:50vmax;
 
 }
 

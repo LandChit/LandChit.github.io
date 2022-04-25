@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/pages.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/ab880f6949.js" crossorigin="anonymous"></script>
+    <title>Lance Info</title>
+</head>
+
+<body onload="display_ct();hide_all()">
+    <noscript>
+        <p class="nojs">javascript is required</p>
+    </noscript>
+
+
+    <div class="icons">
+
+        <button onclick="program(0)" class="icon">
+            <i class="fa fa-address-card fa-3x"></i>
+            <span>About Me</span>
+        </button>
+
+        <button onclick="program(1)" class="icon">
+            <i class="fa fa-laptop-code fa-3x"></i>
+            <span>Technologies</span>
+        </button>
+
+        <button onclick="program(2)" class="icon">
+            <i class="fa fa-medal fa-3x"></i>
+            <span>Achievements</span>
+        </button>
+
+        <button onclick="program(3)" class="icon">
+            <i class="fa fa-code fa-3x"></i>
+            <span>Source Code</span>
+        </button>
+
+
+    </div>
+
+    <div class="pages">
+        <!-- About Me -->
+        <div id="AM">
+            <div class="bar">
+                <span>About Me</span>
+                <button onclick="hide_all()">
+                    <i class="fa fa-close"></i>
+                </button>
+            </div>
+            <div class="content">
+                <span>I am LandChit,</span>
+                <p>&emsp;Hello welcome to my website as you can see it isnt much but it was fun while makng it.</p>
+                <p>&emsp;I am a self proclaimed python developer. I love making discord bots idk it feels satisfying, I
+                    mostly make spam bots to annoy people. I am still learning and im proud that im one of the people
+                    that can do stuff like this</p>
+            </div>
+
+        </div>
+
+        <!-- Technologies -->
+        <div id="TS">
+            <div class="bar">
+                <span>Technologies</span>
+                <button onclick="hide_all()">
+                    <i class="fa fa-close"></i>
+                </button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Python - It is one of my favorites and i can do more in there</li>
+                    <li>JavaScript - Still learning im confused</li>
+                    <li>C# - Feels easier than C++ im not good at it tho</li>
+                    <li>C++ - I can do some</li>
+                    <li>Java - Really annoying curenty paused on learning</li>
+                    <li>Dart/Flutter - I Dropped this because of compatibility issues</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div id="AS">
+            <div class="bar">
+                <span>Achievements</span>
+                <button onclick="hide_all()">
+                    <i class="fa fa-close"></i>
+                </button>
+            </div>
+            <div class="content">
+                <span>None im dumb</span>
+            </div>
+        </div>
+
+        <!-- Source Code -->
+        <div id="SC">
+            <div class="bar">
+                <span>Source Code</span>
+                <button onclick="hide_all()">
+                    <i class="fa fa-close"></i>
+                </button>
+            </div>
+            <div class="content">
+                <span>About Me</span>
+                <span>I am batman</span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="nav">
+        <a href="index.html"><i class="fa fa-windows navigation"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-code"></i></a>
+
+        <span id="datetime" class="right"></span>
+    </div>
+
+    <script rel="javascript" src="js/time.js"></script>
+    <script rel="javascript" src="js/pages.js"></script>
+
+</body>
+
+</html>

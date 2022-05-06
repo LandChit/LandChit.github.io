@@ -5,123 +5,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/pages.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ab880f6949.js" crossorigin="anonymous"></script>
-    <title>LandInfo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Not Manjaro</title>
 </head>
 
-<body onload="display_ct();hide_all()">
-    <noscript>
-        <p class="nojs">javascript is required</p>
-    </noscript>
+<body onload="display_ct()">
 
-
-    <div class="icons">
-
-        <button onclick="program(0)" class="icon">
-            <i class="fa fa-address-card fa-3x" style="color: rgb(47, 47, 47)"></i>
-            <label>About Me</label>
-        </button>
-
-        <button onclick="program(1)" class="icon">
-            <i class="fa fa-laptop-code fa-3x" style="color: rgb(47, 47, 47)"></i>
-            <label>Technologies</label>
-        </button>
-
-        <button onclick="program(2)" class="icon">
-            <i class="fa fa-medal fa-3x" style="color: rgb(47, 47, 47)"></i>
-            <label>Achievements</label>
-        </button>
-
-        <button onclick="javascript:window.open('https://github.com/LandChit/LandChit.github.io', '_blank')" formtarget="_blank" class="icon">
-            <i class="fa fa-code fa-3x" style="color: rgb(47, 47, 47)"></i>
-            <label>Source Code</label>
-        </button>
-
-        <button onclick="javascript:window.open('https://landchitbots.netlify.app', '_blank')" formtarget="_blank" class="icon">
-            <i class="fa-brands fa-discord fa-3x" style="color: rgb(56, 56, 201);"></i>
-            <label>Discord Bots</label>
-        </button>
-
-        <button onclick="javascript:window.open('https://discord.gg/SkUu6PB6b8', '_blank')" formtarget="_blank" class="icon">
-            <i class="fa-brands fa-discord fa-3x" style="color: rgb(62, 59, 94);"></i>
-            <label>Discord Server</label>
-        </button>
-
+    <div id="preloader" class="preloader">
+        <img src="img/other/loading.gif" alt="spinner">
     </div>
 
-    <div class="pages">
-        <!-- About Me -->
-        <div id="AM">
-            <div class="bar">
-                <span>About Me</span>
-                <button onclick="hide_all()">
-                    <i class="fa fa-close"></i>
-                </button>
-            </div>
-            <div class="content">
-                <span>I am LandChit,</span>
-                <p>&emsp;Hello welcome to my website as you can see it isnt much but it was fun while makng it.</p>
-                <p>&emsp;I am a self proclaimed python developer. I love making discord bots idk it feels satisfying, I
-                    mostly make spam bots to annoy people. I am still learning and im proud that im one of the people
-                    that can do stuff like this</p>
-            </div>
-
-        </div>
-
-        <!-- Technologies -->
-        <div id="TS">
-            <div class="bar">
-                <span>Technologies</span>
-                <button onclick="hide_all()">
-                    <i class="fa fa-close"></i>
-                </button>
-            </div>
-            <div class="content">
-                <ul>
-                    <li>Python - It is one of my favorites and i can do more in there</li>
-                    <li>JavaScript - Still learning im confused</li>
-                    <li>C# - Feels easier than C++ im not good at it tho</li>
-                    <li>C++ - I can do some</li>
-                    <li>Java - Really annoying curenty paused on learning</li>
-                    <li>Dart/Flutter - I Dropped this because of compatibility issues</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Achievements -->
-        <div id="AS">
-            <div class="bar">
-                <span>Achievements</span>
-                <button onclick="hide_all()">
-                    <i class="fa fa-close"></i>
-                </button>
-            </div>
-            <div class="content">
-                <span>None im dumb</span>
-            </div>
-        </div>
-
-
+    <div id="warn-top-bar" onclick="rm_topbar()">
+        This project is not affiliated with manjaro and any other companies in any way all copyright and trademark shall
+        be creddited to their
+        respective owners (click me to remove)
+    </div>
+    <div class="warn-landscape">
+        Landscape might not work propperly in your device please stay in portrait mode
     </div>
 
-    <div class="nav">
-        <a href="#"><i class="fa fa-windows navigation"></i></a>
-        <a href="https://github.com/LandChit" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.youtube.com/channel/UCFTq9afPWgOwQRBfr4KRJtw" target="_blank"><i class="fa fa-youtube"></i></a>
-        <a href="https://twitter.com/LandChit?t=yiqUBtaF_CgC_dGMmYR83Q&s=07" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.instagram.com/draggin_lance/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://github.com/LandChit/LandChit.github.io" target="_blank"><i class="fa fa-code"></i></a>
+    <!-- DESKTOP ICONS -->
+    <div class="icons flex-layered">
+        <div class="icon flex-layered" onclick="open_program('credits')">
+            <img src="img/icons/credits.svg">
+            <span>Copyright/<br>Credits</span>
+        </div>
 
+        <div class="icon flex-layered" onclick="open_program('aboutme')">
+            <img src="img/icons/aboutme.png" style="border-radius: 100%;">
+            <span>About Me</span>
+        </div>
+
+        <a href="https://github.com/LandChit" target="_blank">
+            <div class="icon flex-layered">
+            <img src="img/icons/GitHub-Mark.png">
+            <span>Github</span>
+        </div>
+        </a>
         
-        <span for="color" class="nohover">Background Color:</span>
-        <input type="color" id="colorpicker" value="#169b26" class="colorpick">
-        <span id="datetime" class="right nohover"></span>
     </div>
 
-    <script rel="javascript" src="js/time.js"></script>
-    <script rel="javascript" src="js/pages.js"></script>
+    <!-- PROGRAM  -->
+
+    <div id="program">
+        <div class="program-controls">
+            <div>
+                <img id="program-logo">
+            </div>
+            <div style="text-align: center;font-weight: 500;color: rgb(168, 168, 168);">
+                <span id="program-title">TESTING</span>
+            </div>
+            <div style="text-align: right;">
+                <i class="fa-solid fa-window-minimize" style="color:grey"></i>
+                <i class="fa-solid fa-window-maximize" style="color:grey"></i>
+                <i class="fa-solid fa-xmark" style="color:grey" onclick="close_program()"></i>
+            </div>
+        </div>
+        <iframe id="program-display" src="pages/blank.html"></iframe>
+    </div>
+
+    <!-- NAVIGATION BOX -->
+    <div id="navbox">
+        <!-- flex -->
+        <div>
+            <!-- topbar -->
+            <div class="top-bar">
+                <div style="display:flex;">
+                    <img src="img/icons/profile.png" style="width: 2em;margin-left: 0.5em;">
+                    <span style="margin: 0.5em 0.2em;font-weight: bold;">Not Manjaro Linux</span>
+                </div>
+
+            </div>
+            <!-- searchbar -->
+            <div>
+                <input class="searchbar" type="text" placeholder="NON FUNCTIONAL...">
+            </div>
+
+            <!-- flex -->
+            <div style="display: flex;margin-top: 0.3em;">
+                <!-- programs -->
+                <div class="nav-icons">
+                    <!-- Credits -->
+                    <div class="nav-icon" onclick="open_program('credits')">
+                        <img src="img/icons/credits.svg">
+                        <div>
+                            <p>
+                                <b>Copyright</b>
+                                <br>
+                                See the credits and Copyright
+                            </p>
+                        </div>
+                    </div>
+                    <!-- About Me -->
+                    <div class="nav-icon" onclick="open_program('aboutme')">
+                        <img src="img/icons/aboutme.png" style="border-radius: 100%;">
+                        <div>
+                            <p>
+                                <b>About Me</b>
+                                <br>
+                                See the creators information
+                            </p>
+                        </div>
+                    </div>
+
+                <!-- SPACING FOR MOBILE ERROR -->
+                <br>
+                <br>
+                </div> 
+                
+                <!-- tabs -->
+                <div class="tabs">
+                    <div style="background-color: var(--secondary-color);border-radius: 3px;">
+                        <img src="img/icons/gold-star.svg" style="width: 1.3em;">
+                        <span>Favorites</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BOTTOM BAR-->
+    <nav>
+        <!-- left -->
+        <div class="left">
+            <img src="img/icons/Manjaro-logo.svg" onclick="extend()">
+
+            <img id="credits" src="img/icons/credits.svg" onclick="open_program('credits')">
+            <img id="aboutme" src="img/icons/aboutme.png" onclick="open_program('aboutme')">
+        </div>
+
+
+        <!-- right -->
+        <div class="right">
+            <div class="flex-layered" style="margin-right: 0.5em;">
+                <span id="datetime">time</span>
+                <span>Not Manjaro Linux</span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- JAVA SCRIPT IMPORTS -->
+    <script src="js/time.js"></script>
+    <script src="js/program.js"></script>
+    <script src="js/background.js"></script>
+
+    <!-- Preload screen and top bar-->
+    <script>
+        var loader = document.getElementById("preloader")
+
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+        })
+
+        function rm_topbar() {
+            document.getElementById("warn-top-bar").style.display = "none";
+        }
+
+
+    </script>
 
 </body>
 

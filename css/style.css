@@ -1,96 +1,298 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --primary-color: rgb(22, 27, 29);
+    --primary-color-light: rgb(27, 34, 36);
+    --primary-color-light2: rgb(37, 46, 50);
+    --secondary-color: rgb(46, 179, 152);
+    --program-primary-color: rgb(22, 30, 36);
+    --border-color: rgb(20, 25, 27);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+
+* {
+    font-family: 'Noto Sans Display', sans-serif;
+    cursor: default;
+}
+
+.flex-layered {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 
 body {
-    margin: 0%;
-    background-color: rgb(22, 155, 38);
+    margin: 0;
+
+    /*background*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 
-.nav {
+
+.preloader {
+    align-items: center;
+    background: rgb(0, 0, 0);
     display: flex;
-    background-color: black;
-    color: white;
-    padding-right:0.5em;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.2s linear;
+    width: 100%;
+    z-index: 9999;
+    opacity: 1;
+    transform: opacity 1s linear;
+    text-align: center;
+}
+
+.preloader>img {
+    width: 20em;
+}
+
+
+
+
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    background-color: var(--primary-color);
+    padding-right: 0.5em;
     bottom: 0%;
     position: fixed;
     width: 100%;
-}
-
-.nav>* {
-    padding: 7px 7px;
-
-}
-
-.nav>a, a:visited {
+    line-height: 0;
+    border-top: 1px solid var(--border-color);
+    z-index: 52;
     color: white;
 }
 
-.nav>a:active {
-    opacity: 70%;
+
+nav>*>img {
+    width: 1.5em;
+    padding: 0.5em;
 }
 
-.nav>*:hover {
-    background-color: rgb(56, 56, 56);
+
+nav>*>img:hover {
+    background-color: rgba(255, 255, 255, 0.267);
 }
-.nohover:hover{
-    background-color: black;
+
+.left {
+    display: flex;
 }
 
 .right {
-    margin-right: 0.8em;
-    margin-left: auto;
-}
-
-
-.icons {
     display: flex;
-    flex-flow: column wrap;
-    width: max-content;
-    margin-left: 1em;
-    margin-top: 1em;
-    max-height: 75vh;
-
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: 0.3em;
 }
 
-.icons>*:hover, .icons>*:focus {
-    background-color: rgba(106, 106, 106, 0.2);
+.right span {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+}
+
+
+.active-program {
+    background-color: rgba(174, 255, 210, 0.418);
+}
+
+/* NAV ICONS */
+/* .ex{
+    display: none;
+   }
+*/
+#aboutme{
+    display: none;
+}
+
+
+/* NAVIGATION EXPANDED */
+#navbox {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    background-color: var(--primary-color-light);
+    z-index: 51;
+    bottom: 2.5em;
+    width: 45vw;
+    padding: 0.2em;
+    border: 1px solid var(--border-color);
+    max-height: 60vh;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+}
+
+.searchbar {
+    margin-top: 0.5em;
+    border-radius: 11px;
+    width: 44vw;
+    background-color: rgb(44, 51, 53);
     border-width: 1px;
-    border-style: dotted;
-    border-color:  rgba(0, 0, 0, 0.447);
-    border-radius: 10%;
-    margin: -1px -1px;
+    border-color: var(--secondary-color);
+    height: 1.5em;
+
 }
 
-.icon {
+.nav-icons {
+    background-color: rgb(37, 46, 50);
+    border: 1px solid var(--border-color);
+    width: 65%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav-icons::-webkit-scrollbar {
+    display: none;
+}
+
+.navbox::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+}
+
+.tabs {
     display: flex;
     flex-direction: column;
+    width: 35%;
+    margin-left: 0.3em;
+}
+
+@media only screen and (max-width: 725px) {
+    #navbox {
+        width: 20em;
+    }
+
+    .searchbar {
+        width: 23.5em;
+    }
+}
+
+/* NAVIGATION EXPANDED PROGRAMS */
+.nav-icon {
+    display: flex;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+
+.nav-icon img {
+    width: 2.7em;
+    
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-icon div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.4em;
+}
+
+.nav-icon:hover {
+    background-color: rgba(175, 248, 224, 0.192);
+}
+
+
+/* DESKTOP */
+.icons {
+    margin: 0.5em;
+    flex-wrap: wrap;
+    width: max-content;
+    max-height: 80vh;
+}
+
+.icons a, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+.icon {
+    margin: 0.5em;
     justify-content: center;
     align-items: center;
-    padding: 0.5em;
-    background-color: rgba(240, 248, 255, 0);
-    border-style: none;
-    text-decoration: none;
-}
-
-.icon>label {
-    color: white;
-    font-size: small;
+    width: 2em;
     text-align: center;
+    padding: 0.75em 1.5em;
+    border-radius: 10%;
+    min-height: 4em;
+}
+.icon img{
+    width: 3em;
+}
+
+.icon:hover {
+    background-color: rgba(175, 248, 224, 0.192);
+}
+
+/* PROGRAM */
+#program {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 96vh;
+    z-index: 50;
+    background-color: var(--primary-color-light);
+
+}
+
+#program iframe {
+    border: none;
+    height: 100%;
+    width: 100vw;
+}
+
+.program-controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background-color: var(--primary-color);
+    padding: 0.5em;
+}
+
+.program-controls img {
+    width: 1em;
 }
 
 
-.nojs {
+/* WARNINGS */
+#warn-top-bar {
+    display: block;
+    font-size: 11px;
+    width: 100%;
     text-align: center;
     background-color: red;
-    display: block;
-    color: white;
-
 }
 
-.colorpick{
-    z-index: 3;
-    border: 0ch;
-    background-color: rgba(51, 255, 0, 0);
+.warn-landscape {
+    display: none;
 }
+
+@media only screen and (max-height: 640px) {
+    .warn-landscape {
+        display: block;
+
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+        background-color: red;
+    }
+}
+

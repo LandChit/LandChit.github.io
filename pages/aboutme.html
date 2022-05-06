@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>aboutme</title>
+</head>
+
+<body>
+    <div class="tabbed-program">
+        <nav>
+            <span id="taboutme" class="selected-tab" onclick="open_tab('aboutme')">About Me</span>
+
+            <span id="ttechnologies" onclick="open_tab('technologies')">Technologies</span>
+
+            <span id="tachievements" onclick="open_tab('achievements')">Achievements</span>
+
+            <span id="tprojects" onclick="open_tab('projects')">Projects</span>
+
+            <span id="tcontactme" onclick="open_tab('contactme')">Contact Me</span>
+        </nav>
+        <!-- About Me -->
+        <div id="aboutme" style="padding: 0.2em;display: flex;width: 100%;flex-direction: column;">
+            <!-- Profile -->
+            <div
+                style="display: flex;flex-direction: column;text-align: center;justify-content: center;justify-items: center;align-items: center;color: white;">
+                <img src="../img/icons/aboutme.png" style="width: 10em;border-radius: 100%;">
+                <span>Landchit</span>
+                <span>Gamer/Developer</span>
+            </div>
+            <p style="color: white;max-width: 50em;margin-left: auto;margin-right: auto;">Hello I am LandChit,<br><tab></tab>&nbsp;&nbsp;&nbsp;&nbsp;
+                I am a gamer although i dont really play competetively i love coding i personally think that its fun
+                solving problems and creating bigger problems that you have to solve sometimes it gets annoying but
+                you need it to improve your skills
+            </p>
+        </div>
+        <!-- Technologies -->
+        <div id="technologies" style="display: none;width: 100%;">
+            <div>
+                <h1>PYTHON</h1>
+                <img src="../img/icons/Python-logo.svg">
+                <span>I am not that efficient but im most comfortable in it</span>
+            </div>
+
+            <div>
+                <h1>Web Dev</h1>
+                <img src="../img/icons/HTML5-logo.svg">
+                <span>HTML, CSS, Javascipt i can make a basic website like this one but its not efficient</span>
+            </div>
+
+            <div>
+                <h1>C++</h1>
+                <img src="../img/icons/c.svg">
+                <span>Still Learning/a total noob</span>
+            </div>
+
+            <div>
+                <h1>C#</h1>
+                <img src="../img/icons/c--4.svg">
+                <span>Still Learning/a total noob</span>
+            </div>
+
+            
+
+        </div>
+        <!-- Achievements -->
+        <div id="achievements" style="display: none;width: 100%;">
+            <h1>NONE LOL</h1>
+        </div>
+        <!-- Projects -->
+        <div id="projects" style="display: none;width: 100%;">
+            <h1>WORK IN PROGRESS</h1>
+        </div>
+        <!-- Contact Me -->
+        <div id="contactme" style="display: none;width: 100%;">
+            <h1>CURRENTLY UNAVAILABLE</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Tab switching -->
+    <script>
+        function close_tabs(){
+            document.getElementById("taboutme").classList.remove('selected-tab');
+            document.getElementById("ttechnologies").classList.remove('selected-tab');
+            document.getElementById("tachievements").classList.remove('selected-tab');
+            document.getElementById("tprojects").classList.remove('selected-tab');
+            document.getElementById("tcontactme").classList.remove('selected-tab');
+
+            document.getElementById('aboutme').style.display = "none";
+            document.getElementById('technologies').style.display = "none";
+            document.getElementById('achievements').style.display = "none";
+            document.getElementById('projects').style.display = "none";
+            document.getElementById('contactme').style.display = "none";
+        }
+
+        function open_tab(tab){
+            close_tabs()
+            document.getElementById(tab).style.display = "flex";
+            document.getElementById("t"+tab).classList.add('selected-tab');
+        }
+    </script>
+</body>
+
+</html>

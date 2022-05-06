@@ -1,0 +1,109 @@
+:root {
+    --primary-color: rgb(22, 27, 29);
+    --primary-color-light: rgb(27, 34, 36);
+    --primary-color-light2:rgb(37, 46, 50);
+    --secondary-color: rgb(46, 179, 152);
+    --program-primary-color:rgb(22, 30, 36);
+    --border-color: rgb(20, 25, 27);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+
+* {
+    font-family: 'Noto Sans Display', sans-serif;
+    color: white;
+}
+
+a, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--primary-color-light);
+}
+
+.credits{
+    display: flex;
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color-light2);
+    margin: 1em;
+}
+.credits img{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 3em;
+    height: 100%;
+}
+.credits div{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.abutton{
+    border:1px solid rgb(0, 73, 10);
+    border-radius: 5px;
+    padding: 0.5em;
+    width: fit-content;
+    background-color: green;
+}
+
+.tabbed-program{
+    display: flex;
+}
+.tabbed-program > div{
+    margin-left: 8em;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--primary-color-light2);
+    border: 1px solid var(--border-color);
+    height: 99vh;
+    width: 8em;
+}
+nav >*{
+    padding: 0.5em;
+    border-bottom:  1px solid var(--border-color);
+}
+nav >*:hover{
+    background-color: var(--secondary-color);
+}
+
+.selected-tab{
+    background-color: var(--program-primary-color);
+}
+
+
+#technologies{
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+#technologies img{
+    width: 5em;
+}
+#technologies div{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color-light2);
+    margin: 0.5em;
+    border: 1px solid var(--border-color);
+    width: 12em;
+    height: 15em;
+    align-items: center;
+    text-align: center;
+}
+
+#achievements{
+    padding: 1em;
+}
+
+#projects{
+    padding: 1em;
+}
